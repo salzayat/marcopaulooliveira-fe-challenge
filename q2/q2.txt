@@ -1,0 +1,30 @@
+Given a data file containing an array of strings representing a hierarchy, e.g.:
+
+[
+ "animals.dogs.poodle",
+ "animals.cats.tabby",
+ "animals.cats.siamese",
+ "animals.dogs.labrador",
+ "animals.dogs.hound",
+ "plants.trees",
+ "animals.birds.parrot.grey"
+ ...]
+
+Write a script in Javascript to create a tree data structure out of it. Output the data in tree form.
+
+EG:
+
+root
+  animals
+    dogs
+      poodle
+      labrador
+      hound
+    cats
+      tabby
+      siamese
+    birds
+      parrot
+        grey
+  plants
+    trees

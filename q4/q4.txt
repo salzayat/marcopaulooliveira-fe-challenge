@@ -1,0 +1,1 @@
+In a modern browser, present several ways, using HTML and CSS to create a white square, exactly centered inside another larger red square, as shown in q4image.png.

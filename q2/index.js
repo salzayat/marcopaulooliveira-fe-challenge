@@ -1,16 +1,16 @@
 import myJson from './q2data.json' assert {type: 'json'};
 
 const transformToTree = (obj) => {
-    return obj.reduce((acc, row) => {
-       const k = row.slice(0, row.indexOf('.'))
-       const v = row.slice(row.indexOf('.') + 1).split('.')
-       
-       const newObj = {
-         [k]: v.length > 1 ? transformToTree(v) : v
-       }
- 
-       return Object.assign(acc, newObj)
-    }, { })
+    return obj.reduce((r, s) => {
+       ('root.' + s).split('.').reduce((a, item) => {
+           var array = a.find(([v]) => v === item);
+           if (!array) {
+               a.push(array = [item, []]);
+           }
+           return array[1];
+       }, r);
+       return r;
+   }, []).pop();
  }
 
 
